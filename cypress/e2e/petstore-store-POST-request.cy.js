@@ -3,7 +3,9 @@ import storeBody from "../fixtures/storeBody.json"
 
 describe('API Petstore Tests', () => {
 
-  it('post-request: Create an Order for a pet ==> Tucker, turtle', () => {
+  it('post-request: Create an Order for a pet from TC01', () => {
+
+    // Create Order for turtle Tucker
 
     cy.postRequest(
       endpoints.store.postStore,
@@ -16,7 +18,9 @@ describe('API Petstore Tests', () => {
     })
   })
 
-  it('post-request: Create an Order for a pet ==> Charlie, rabbit', () => {
+  it('post-request: Create an Order for a pet from TC02', () => {
+
+    // Create Order for rabbit Charlie
 
     cy.postRequest(
       endpoints.store.postStore,
