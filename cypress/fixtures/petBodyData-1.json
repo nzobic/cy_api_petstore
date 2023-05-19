@@ -17,7 +17,8 @@
   "status": "available"
   },
 
-  { "id": 602,
+
+  { "id": 601,
   "category": {
     "id": 0,
     "name": "rabbit"
@@ -35,7 +36,8 @@
   "status": "available"
   },
 
-  { "id": 603,
+
+  { "id": 602,
   "category": {
     "id": 0,
     "name": "hamster"

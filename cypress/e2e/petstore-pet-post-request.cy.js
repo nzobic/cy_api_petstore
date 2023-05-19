@@ -1,12 +1,12 @@
-import petBody from "../fixtures/petBody.json"
 import endpoints from "../fixtures/endpoints.json"
+import petBirds from "../fixtures/petBirds.json"
 //const url = cypress.env("url");
-import petBodyData from "../fixtures/petBodyData.json"
+import petBodyData1 from "../fixtures/petBodyData-1.json"
 import petBodyData2 from "../fixtures/petBodyData-2.json"
 
 describe('API Petstore Tests', () => {
 
-  it('post-request: Create Pet: Luna, dog', () => {
+  it('post-request: Create Luna, dog', () => {
 
     cy.request({
       method: "POST",
@@ -42,7 +42,7 @@ describe('API Petstore Tests', () => {
   })
 
 
-  it('post-request: Create Pet: Max, cat', () => {
+  it('post-request: Create Max, cat', () => {
 
     cy.request({
       method: "POST",
@@ -78,7 +78,7 @@ describe('API Petstore Tests', () => {
   })
 
 
-  xit('post-request: Create Pet: Empty name', () => {
+  xit('post-request: Create Pet with Empty name', () => {
 
     cy.request({
       method: "POST",
@@ -112,25 +112,25 @@ describe('API Petstore Tests', () => {
   }) //False Failure
 
 
-  it('post-request: Create Pet: Milly, bird', () => {
+  it('post-request: Create Pet using Commands/Fixtures', () => {
 
-        petBody.id = 123;
+        petBirds.id = 123;
 
         cy.postRequest(
           endpoints.pet.postPet,
-          petBody
+          petBirds
         ).then(response => {
             expect(response.status).eq(200)
-            expect(response.body.id).eq(petBody.id)
+            expect(response.body.id).eq(petBirds.id)
             expect(response.body.category.name).eq("birds")
             expect(response.body.name).eq("Milly")
           })
   })
 
 
-  it('post-request: Create Pets with different IDs: array of bodies', () => {
+  it('post-request: Create Pets with different IDs: Array of bodies', () => {
 
-        petBodyData.forEach((petData) => {
+        petBodyData1.forEach((petData) => {
 
           cy.postRequest(
             endpoints.pet.postPet,
@@ -141,26 +141,24 @@ describe('API Petstore Tests', () => {
               expect(response.body.category.name).eq(petData.category.name)
               expect(response.body.name).eq(petData.name)
             })
-    })
-
-
+        })
   })
 
 
   Object.entries(petBodyData2).forEach(([key, value]) => {
 
-    it(key + ' post-request: Create Pets with different IDs: objects', () => {
+    it(key + ' post-request: Create Pets with different IDs: Objects', () => {
 
-      cy.postRequest(
-        endpoints.pet.postPet,
-        value
-      ).then(response => {
-          expect(response.status).eq(200)
-          expect(response.body.id).eq(value.id)
-          expect(response.body.category.name).eq(value.category.name)
-          expect(response.body.name).eq(value.name)
-        })
-    })
+        cy.postRequest(
+          endpoints.pet.postPet,
+          value
+        ).then(response => {
+            expect(response.status).eq(200)
+            expect(response.body.id).eq(value.id)
+            expect(response.body.category.name).eq(value.category.name)
+            expect(response.body.name).eq(value.name)
+          })
+      })
   })
 
 

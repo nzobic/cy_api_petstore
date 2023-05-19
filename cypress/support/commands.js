@@ -1,10 +1,8 @@
-// -- This is a parent command --
-
 /**
  * @method postRequest
  * @param url Endpoint URL
  * @param body JSON Body
- * @param description use to send Post Requests
+ * @param description use to send POST Requests
  */
 
 Cypress.Commands.add('postRequest', (url, body) => { 
@@ -17,13 +15,13 @@ Cypress.Commands.add('postRequest', (url, body) => {
         },
         body: body
       })
- })
+})
 
 
  /**
  * @method getRequest
  * @param url Endpoint URL
- * @param description use to send Get Requests
+ * @param description use to send GET Requests
  */
 
 Cypress.Commands.add('getRequest', (url) => { 
