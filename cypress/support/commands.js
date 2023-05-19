@@ -5,9 +5,8 @@
  * @param description use to send POST Requests
  */
 
-Cypress.Commands.add('postRequest', (url, body) => { 
-<<<<<<< HEAD
-    cy.request({
+Cypress.Commands.add('postRequest', (url, body) => {
+        cy.request({
         method: "POST",
         url: url,
         headers:{
@@ -17,19 +16,6 @@ Cypress.Commands.add('postRequest', (url, body) => {
         body: body
       })
 })
-=======
-  cy.request({
-      method: "POST",
-      url: url,
-      headers:{
-        Token: "176f27f11d53996090b2aa3a8826cf681d4fb2379f2a7e79701c751588b4f51d",
-        accept: "application/json",
-        "content-type": "application/json"
-      },
-      body: body
-  })
- })
->>>>>>> dcd9b4265b97913528b247e3f47196164bc0e7fb
 
 
 /**

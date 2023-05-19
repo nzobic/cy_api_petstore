@@ -1,21 +1,10 @@
 {
-  "qasePost": {
-    "postProject": "https://api.qase.io/v1/project",
-    "postSuite": "https://api.qase.io/v1/suite/$",
-    "postCase": "https://api.qase.io/v1/case/$",
-    "postPlan": "https://api.qase.io/v1/plan/$",
-    "postDefect": "https://api.qase.io/v1/defect/$",
-    "postTestRun": "https://api.qase.io/v1/run/$",
-    "postSetResults": "https://api.qase.io/v1/result/$/$$"
-
+  "pet": {
+    "postPet": "https://petstore.swagger.io/v2/pet",
+    "getPet": "https://petstore.swagger.io/v2/$"
   },
 
-  "qaseGet": {
+  "store": {
     "getProjects": "https://api.qase.io/v1/project"
-  },
-
-  "qaseDelete": {
-    "deleteProject": "https://api.qase.io/v1/project/$"
   }
-  
 }
