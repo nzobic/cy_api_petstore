@@ -1,8 +1,8 @@
-import endpoints from "../fixtures/endpoints.json"
-import petBirds from "../fixtures/petBirds.json"
+import endpoints from "../fixtures/endpoints.json";
+import petBirds from "../fixtures/petBirds.json";
 //const url = cypress.env("url");
-import petBodyData1 from "../fixtures/petBodyData-1.json"
-import petBodyData2 from "../fixtures/petBodyData-2.json"
+import petBodyData1 from "../fixtures/petBodyData-1.json";
+import petBodyData2 from "../fixtures/petBodyData-2.json";
 
 describe('API Petstore Tests', () => {
 

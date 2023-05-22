@@ -1,5 +1,5 @@
-import endpoints from "../fixtures/endpoints.json"
-import storeBody from "../fixtures/storeBody.json"
+import endpoints from "../fixtures/endpoints.json";
+import storeBody from "../fixtures/storeBody.json";
 
 describe('API Petstore Tests', () => {
 

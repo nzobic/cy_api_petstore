@@ -1,4 +1,4 @@
-import endpoints from "../fixtures/endpoints.json"
+import endpoints from "../fixtures/endpoints.json";
 
 describe('API Petstore Tests', () => {
 
